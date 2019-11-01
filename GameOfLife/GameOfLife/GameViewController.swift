@@ -15,16 +15,15 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //// retrieve the SCNView. Criando uma nova cena
+        // retrieve the SCNView.
         let sceneView = self.view as! SCNView
         let scene = GameScene()
-       // let scene = SCNScene()
     
-        // Atribuindo a cena para a view. // set the scene to the view
+        // set the scene to the view.
         sceneView.scene = scene
+        sceneView.pointOfView?.position = SCNVector3Make(0, 0, 100)
         
-        
-        // MARK: Algumas propriedads da sceneView
+        // MARK: Algumas propriedades da sceneView
         sceneView.allowsCameraControl = true
         sceneView.showsStatistics = true
         sceneView.backgroundColor = UIColor.white
