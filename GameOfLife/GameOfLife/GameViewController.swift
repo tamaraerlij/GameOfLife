@@ -17,8 +17,7 @@ class GameViewController: UIViewController {
         
         //// retrieve the SCNView. Criando uma nova cena
         let sceneView = self.view as! SCNView
-        
-        // let scene = GameScene()
+        let scene = GameScene()
        // let scene = SCNScene()
     
         // Atribuindo a cena para a view. // set the scene to the view
