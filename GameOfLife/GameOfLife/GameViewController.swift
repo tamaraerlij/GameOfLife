@@ -15,13 +15,13 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Criando uma nova cena
+        //// retrieve the SCNView. Criando uma nova cena
         let sceneView = self.view as! SCNView
         
-        // ou let scene = GameScene()
-        let scene = SCNScene()
+        // let scene = GameScene()
+       // let scene = SCNScene()
     
-        // Atribuindo a cena para a view
+        // Atribuindo a cena para a view. // set the scene to the view
         sceneView.scene = scene
         
         
@@ -52,40 +52,19 @@ class GameViewController: UIViewController {
         ambientLightNode.light!.color = UIColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode)
         
-        // retrieve the ship node
-        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
-        
-        // animate the 3d object
-        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-        
-        // retrieve the SCNView
-        let scnView = self.view as! SCNView
-        
-        // set the scene to the view
-        scnView.scene = scene
-        
-        // allows the user to manipulate the camera
-        scnView.allowsCameraControl = true
-        
-        // show statistics such as fps and timing information
-        scnView.showsStatistics = true
-        
-        // configure the view
-        scnView.backgroundColor = UIColor.black
-        
-        // add a tap gesture recognizer
+     // Reconhecimento do toque
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        scnView.addGestureRecognizer(tapGesture)
+             sceneView.addGestureRecognizer(tapGesture)
     }
     
     @objc
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
-        let scnView = self.view as! SCNView
+        let sceneView = self.view as! SCNView
         
         // check what nodes are tapped
-        let p = gestureRecognize.location(in: scnView)
-        let hitResults = scnView.hitTest(p, options: [:])
+        let p = gestureRecognize.location(in: sceneView)
+        let hitResults = sceneView.hitTest(p, options: [:])
         // check that we clicked on at least one object
         if hitResults.count > 0 {
             // retrieved the first clicked object
