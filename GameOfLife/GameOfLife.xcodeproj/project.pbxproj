@@ -13,6 +13,7 @@
 		95302C17236B695A002F2FE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95302C15236B695A002F2FE5 /* Main.storyboard */; };
 		95302C19236B695D002F2FE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95302C18236B695D002F2FE5 /* Assets.xcassets */; };
 		95302C1C236B695D002F2FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95302C1A236B695D002F2FE5 /* LaunchScreen.storyboard */; };
+		95302C28236C035F002F2FE5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C27236C035F002F2FE5 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		95302C18236B695D002F2FE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95302C1B236B695D002F2FE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95302C1D236B695D002F2FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95302C27236C035F002F2FE5 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				95302C0F236B695A002F2FE5 /* AppDelegate.swift */,
 				95302C11236B695A002F2FE5 /* art.scnassets */,
 				95302C13236B695A002F2FE5 /* GameViewController.swift */,
+				95302C27236C035F002F2FE5 /* Cell.swift */,
 				95302C15236B695A002F2FE5 /* Main.storyboard */,
 				95302C18236B695D002F2FE5 /* Assets.xcassets */,
 				95302C1A236B695D002F2FE5 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				95302C14236B695A002F2FE5 /* GameViewController.swift in Sources */,
 				95302C10236B695A002F2FE5 /* AppDelegate.swift in Sources */,
+				95302C28236C035F002F2FE5 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

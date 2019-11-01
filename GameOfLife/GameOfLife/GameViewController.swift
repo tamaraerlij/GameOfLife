@@ -15,8 +15,20 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        // Criando uma nova cena
+        let sceneView = self.view as! SCNView
+        
+        // ou let scene = GameScene()
+        let scene = SCNScene()
+    
+        // Atribuindo a cena para a view
+        sceneView.scene = scene
+        
+        
+        // MARK: Algumas propriedads da sceneView
+        sceneView.allowsCameraControl = true
+        sceneView.showsStatistics = true
+        sceneView.backgroundColor = UIColor.white
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
