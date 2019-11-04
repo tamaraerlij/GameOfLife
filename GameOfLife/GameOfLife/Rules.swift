@@ -10,9 +10,21 @@
 import Foundation
 import SceneKit
 
+class Rules {
+    
 // MARK: RULES
-// The game takes place on a grid of cells. Each cell can either be alive or dead. Four simple rules determine the vitality of each cell.
-//1. Any live cell with fewer than two live neighbors will die.
-//2. Any live cell with two or three live neighbors will live on to the next generation.
-//3. Any live cell with more than three live neighbors will die.
-//4. Any dead cell with exactly three live neighbors will become a live cell.
+    // cell <= 1 : dead
+    // cell = 2 and 3 = alive
+    // cell = 4 or more = dead
+    // cell with 3 neighbors = alive
+
+    var initialState : Cell.State
+    var finalState: Cell.State
+
+    
+    init(initialState: Cell.State, finalState: Cell.State) {
+        self.initialState = initialState
+        self.finalState = finalState
+    }
+
+}
