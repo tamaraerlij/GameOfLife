@@ -67,27 +67,9 @@ class GameViewController: UIViewController {
         if hitResults.count > 0 {
             // retrieved the first clicked object
             _ = hitResults[0]
-            
-//            // get its material
-//            let material = result.node.geometry!.firstMaterial!
+//            guard let cell = result.node as? Cell else { return }
+//            cell.changeState()
 //
-//            // highlight it
-//            SCNTransaction.begin()
-//            SCNTransaction.animationDuration = 0.5
-//
-//            // on completion - unhighlight
-//            SCNTransaction.completionBlock = {
-//                SCNTransaction.begin()
-//                SCNTransaction.animationDuration = 0.5
-//
-//                material.emission.contents = UIColor.black
-//
-//                SCNTransaction.commit()
-//            }
-//
-//            material.emission.contents = UIColor.red
-//
-//            SCNTransaction.commit()
         }
     }
     

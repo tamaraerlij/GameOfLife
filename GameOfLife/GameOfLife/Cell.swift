@@ -8,52 +8,30 @@
 import SceneKit
 import Foundation
 //
-class Cell : SCNShape {
+class Cell  {
     // Cells represent each of the little lives in the simulation. They can be in one of two states — dead or alive — they also know their position in the world. These are the properties we’ll add to our cell.
     
-      var isAlive: Bool = false
-
+    // MARK: Constantes e variáveis
+     let x: Int = 0
+     let y: Int = 0
+     var position: (x: Int, y: Int)
+     var state: State
+     var isAlive: Bool
+     
+    // MARK: inicializar a classe
+    init(x: Int, y: Int) {
+        position = (x,y)
+        state = .dead
+        isAlive = false
+    }
     
+    // MARK: Estado da célula
     public enum State {
         case alive
         case dead
     }
     
-    public struct Cell {
-        public let x: Int
-        public let y: Int
-        public var state: State
-    }
-    
+    // MARK: Pensar em como copiar/reproduzir a célula várias vezes
 
-//    private let aliveColor = UIColor.white.withAlphaComponent(0.75)
-//    private var boxNode: SCNNode
-//
-//    // A color that can be set and the box will use
-//       public var color: UIColor? {
-//           didSet {
-//               self.boxNode.geometry?.firstMaterial?.diffuse.contents = color ?? aliveColor
-//           }
-//    }
-//        public var isAlive: Bool {
-//            didSet {
-//                boxNode.isHidden = !isAlive
-//            }
-//        }
-//
-//       init(isAlive alive: Bool, nodeWidth: CGFloat, nodeHeight: CGFloat) {
-//            let box = SCNBox(width: nodeWidth, height: nodeHeight, length: nodeWidth, chamferRadius: 0)
-//            // Set the firstMaterial to the aliveColor
-//            box.firstMaterial?.diffuse.contents = aliveColor
-//            boxNode = SCNNode(geometry: box)
-//            isAlive = alive
-//           // super.init()
-//          //  addChildNode(boxNode)
-//            boxNode.isHidden = !isAlive
-//        }
-        
-       // required init?(coder aDecoder: NSCoder) {
-         //   fatalError("init(coder:) has not been implemented")
-      //  }
     
 }

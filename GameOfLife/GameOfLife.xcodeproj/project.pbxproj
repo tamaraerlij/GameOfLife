@@ -16,7 +16,6 @@
 		95302C28236C035F002F2FE5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C27236C035F002F2FE5 /* Cell.swift */; };
 		95302C2A236C07DC002F2FE5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C29236C07DC002F2FE5 /* GameScene.swift */; };
 		95302C2C236C9C0C002F2FE5 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C2B236C9C0C002F2FE5 /* Rules.swift */; };
-		95302C2E236C9E49002F2FE5 /* WorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C2D236C9E49002F2FE5 /* WorldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		95302C27236C035F002F2FE5 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		95302C29236C07DC002F2FE5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		95302C2B236C9C0C002F2FE5 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
-		95302C2D236C9E49002F2FE5 /* WorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +64,10 @@
 			children = (
 				95302C0F236B695A002F2FE5 /* AppDelegate.swift */,
 				95302C11236B695A002F2FE5 /* art.scnassets */,
-				95302C13236B695A002F2FE5 /* GameViewController.swift */,
 				95302C29236C07DC002F2FE5 /* GameScene.swift */,
-				95302C2B236C9C0C002F2FE5 /* Rules.swift */,
 				95302C27236C035F002F2FE5 /* Cell.swift */,
-				95302C2D236C9E49002F2FE5 /* WorldView.swift */,
+				95302C13236B695A002F2FE5 /* GameViewController.swift */,
+				95302C2B236C9C0C002F2FE5 /* Rules.swift */,
 				95302C15236B695A002F2FE5 /* Main.storyboard */,
 				95302C18236B695D002F2FE5 /* Assets.xcassets */,
 				95302C1A236B695D002F2FE5 /* LaunchScreen.storyboard */,
@@ -156,7 +153,6 @@
 				95302C10236B695A002F2FE5 /* AppDelegate.swift in Sources */,
 				95302C2A236C07DC002F2FE5 /* GameScene.swift in Sources */,
 				95302C28236C035F002F2FE5 /* Cell.swift in Sources */,
-				95302C2E236C9E49002F2FE5 /* WorldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
