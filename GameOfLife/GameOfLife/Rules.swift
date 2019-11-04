@@ -13,9 +13,11 @@ import SceneKit
 class Rules {
     
 // MARK: RULES
+// Populated
     // cell <= 1 : dead
     // cell = 2 and 3 = alive
     // cell = 4 or more = dead
+// Unpopulated
     // cell with 3 neighbors = alive
 
     var initialState : Cell.State
@@ -26,5 +28,4 @@ class Rules {
         self.initialState = initialState
         self.finalState = finalState
     }
-
 }

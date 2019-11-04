@@ -16,6 +16,7 @@
 		95302C28236C035F002F2FE5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C27236C035F002F2FE5 /* Cell.swift */; };
 		95302C2A236C07DC002F2FE5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C29236C07DC002F2FE5 /* GameScene.swift */; };
 		95302C2C236C9C0C002F2FE5 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95302C2B236C9C0C002F2FE5 /* Rules.swift */; };
+		95E3FDDD23708F0A004164C8 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3FDDC23708F0A004164C8 /* World.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		95302C27236C035F002F2FE5 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		95302C29236C07DC002F2FE5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		95302C2B236C9C0C002F2FE5 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		95E3FDDC23708F0A004164C8 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				95302C29236C07DC002F2FE5 /* GameScene.swift */,
 				95302C27236C035F002F2FE5 /* Cell.swift */,
 				95302C13236B695A002F2FE5 /* GameViewController.swift */,
+				95E3FDDC23708F0A004164C8 /* World.swift */,
 				95302C2B236C9C0C002F2FE5 /* Rules.swift */,
 				95302C15236B695A002F2FE5 /* Main.storyboard */,
 				95302C18236B695D002F2FE5 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E3FDDD23708F0A004164C8 /* World.swift in Sources */,
 				95302C14236B695A002F2FE5 /* GameViewController.swift in Sources */,
 				95302C2C236C9C0C002F2FE5 /* Rules.swift in Sources */,
 				95302C10236B695A002F2FE5 /* AppDelegate.swift in Sources */,
