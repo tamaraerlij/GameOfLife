@@ -11,22 +11,22 @@ import QuartzCore
 import SceneKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // retrieve the SCNView.
-        let sceneView = self.view as! SCNView
+        let scnView = self.view as! SCNView
         let scene = GameScene()
     
         // set the scene to the view.
-        sceneView.scene = scene
-        sceneView.pointOfView?.position = SCNVector3Make(0, 0, 100)
+        scnView.scene = scene
+        scnView.pointOfView?.position = SCNVector3Make(0, 0, 100)
         
         // MARK: Algumas propriedades da sceneView
-        sceneView.allowsCameraControl = true
-        sceneView.showsStatistics = true
-        sceneView.backgroundColor = UIColor.white
+        scnView.allowsCameraControl = true
+        scnView.showsStatistics = true
+        scnView.backgroundColor = UIColor.black
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -52,26 +52,45 @@ class GameViewController: UIViewController {
         
      // Reconhecimento do toque
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-             sceneView.addGestureRecognizer(tapGesture)
+             scnView.addGestureRecognizer(tapGesture)
+     //   self.view.addGestureRecognizer(tapGesture)
     }
     
     @objc
-    func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
         // retrieve the SCNView
-        let sceneView = self.view as! SCNView
-        
-        // check what nodes are tapped
-        let p = gestureRecognize.location(in: sceneView)
-        let hitResults = sceneView.hitTest(p, options: [:])
-        // check that we clicked on at least one object
-        if hitResults.count > 0 {
-            // retrieved the first clicked object
-            _ = hitResults[0]
-//            guard let cell = result.node as? Cell else { return }
-//            cell.changeState()
-//
-        }
-    }
+                let scnView = self.view as! SCNView
+                // check what nodes are tapped
+                let p = gestureRecognizer.location(in: scnView)
+                let hitResults = scnView.hitTest(p, options: [:])
+                // check that we clicked on at least one object
+                if hitResults.count > 0 {
+                    // retrieved the first clicked object
+                    let result = hitResults[0]
+                    print("toque")
+                    // get its material
+                    let material = result.node.geometry!.firstMaterial!
+                    // highlight it
+                    SCNTransaction.begin()
+                    SCNTransaction.animationDuration = 0.5
+                    
+                    // on completion - unhighlight
+                    SCNTransaction.completionBlock = {
+                        SCNTransaction.begin()
+                        SCNTransaction.animationDuration = 0.5
+                        
+                        material.emission.contents = UIColor.black
+                        
+                        SCNTransaction.commit()
+                    }
+                    
+        //            material.emission.contents = UIColor.red
+                    material.diffuse.contents = UIColor.red
+                    
+                    SCNTransaction.commit()
+                }
+            }
+            
     
     override var shouldAutorotate: Bool {
         return true

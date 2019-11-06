@@ -11,7 +11,7 @@ import SceneKit
 import UIKit
 
  class World {
-  //   var cells = [Cell]()
+     var cells = [Cell]()
     let size: Int
     var life: [[[Bool]]] = []
     var cellsOfLife: [[[Cell]]] = []

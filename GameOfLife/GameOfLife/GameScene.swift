@@ -18,11 +18,11 @@ class GameScene: SCNScene {
  override init() {
             super.init()
     
-            let offset: Int = 8
+            let offset: Int = 4
             
             for i in 0..<8 {
                 for j in 0..<8 {
-                    let geometry = SCNBox(width: 0.7, height: 0.7, length: 0.7, chamferRadius: 0.005)
+                    let geometry = SCNBox(width: 0.7, height: 0.7, length: 0.7, chamferRadius: 0.001)
                     // The box that will represent the cell
                     let boxNode = SCNNode(geometry: geometry)
                     
@@ -31,12 +31,10 @@ class GameScene: SCNScene {
                      geometry.firstMaterial?.emission.contents = UIColor.red
 
        // If you want to assign a new material to each geometry, you need to create a copy of the geometry and assign a new material to that geometry copy.
-                   let boxCopy = boxNode.copy() as! SCNNode
-                    
        //Setar a posicao da caixa
                     boxNode.position.x = Float(i-offset)
                     boxNode.position.y = Float(j-offset)
-                    self.rootNode.addChildNode(boxCopy)
+                    self.rootNode.addChildNode(boxNode)
                     
                     
                 }
